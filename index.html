@@ -23,38 +23,87 @@
       <div class="row">
       <div class="col s12 m6">
         <h2>Fill out Form</h2>
+        <!--form content-->
         <form action="">
-          <label for="age">Enter your age</label>
-          <input type="text" placeholder="Your Age" name="age" id="age" class="form-input">
-          <label for="weight">Enter your Weight</label>
-          <input type="text" placeholder="Your weight" name="weight" id="weight" class="form-input">
-          <label for="Height">Enter you Height</label>
-          <input type="text" placeholder="Your Height" name="Height" id="Height" class="form-input">
+          
+          <div class="field-outer">
+            <label for="distance" class="top-label">Age:</label>
+            <div class="field-items">
+              <div class="field field-large">         
+                <input type="text" name="age" id="age" inputmode="numeric" pattern="[0-9]*">
+              </div>
+              <div class="field field-medium">
+                <select name="gender">
+                  <option value="" disabled selected></option>
+                  <option value="Female">Female</option>
+                  <option value="Male">Male</option>
+                </select>
+              </div>
+            </div>
+          </div>
+      
+          <div class="field-outer">
+            <label for="weight" class="top-label">Your weight:</label>
+            <div class="field-items">
+              <div class="field field-large">
+                <input type="text" name="weight" id="weight" inputmode="numeric" pattern="[0-9]*">
+              </div>
+              <div class="field field-small">
+                <select name="weight_unit">
+                  <option value="" disabled selected></option>
+                  <option value="lb">lb</option>
+                  <option value="kg">kg</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-outer">
+            <label for="height" class="top-label">Height:</label>
+            <div class="field-items">
+              <div class="field">
+                <input type="text" name="height_ft" id="height-ft" inputmode="numeric" pattern="[0-9]*">
+                <label for="height-ft">feet</label>
+              </div>
+              <div class="field">
+                <input type="text" name="height_in" id="height-in" inputmode="numeric" pattern="[0-9]*">
+                <label for="height-in">inches</label>
+              </div>
+              <div class="field">
+                <input type="text" name="height_cm" id="height-cm" inputmode="numeric" pattern="[0-9]*">
+                <label for="height-cm">or centimeters</label>
+              </div>   
+            </div>
+          </div>
+
           <label for="zip-code">Enter your zip code</label>
           <input type="text" placeholder="zip-code" name="zip-code" id="zip-code" class="form-input">
           
           <p>Do you want to maintain, lose or gain weight?</p>
-            <label>
-              <input type="radio" name="type-confirm" id="maintain-yes" />
-              <span>Maintain</span>
-            </label>
+          <label>
+          <input type="radio" name="type-confirm" id="maintain-yes" />
+          <span>Maintain</span>
+          </label>
             
-            <label>
-              <input type="radio" name="type-confirm" id="lose-yes" />
-              <span>Lose</span>
-            </label>
+          <label>
+          <input type="radio" name="type-confirm" id="lose-yes" />
+          <span>Lose</span>
+          </label>
             
-            <label>
-              <input type="radio" name="type-confirm" id="gain-yes" />
-              <span>Gain</span>
-            </label>
-            <br/>
-          <button type="submit" class="red accent-1 white-text">Submit</button>
+          <label>
+          <input type="radio" name="type-confirm" id="gain-yes" />
+          <span>Gain</span>
+          </label>
+          <br/>
+          <div class="btn-wrap field-outer">
+            <button class="red accent-1 white-text form-submit">Submit</button>
+          </div>
         </form>
       </div>
-      <div class="col s12 m6">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim animi voluptatum quisquam illo aliquid ad explicabo vero? Voluptatem, cupiditate ex, necessitatibus nihil facere fuga nemo quis architecto explicabo, deserunt officia!</p>
-      </div>
+        
+       <div class="col s12 m6">
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim animi voluptatum quisquam illo aliquid ad explicabo vero? Voluptatem, cupiditate ex, necessitatibus nihil facere fuga nemo quis architecto explicabo, deserunt officia!</p>
+       </div>
       </div>
     </div>
   </section>  
@@ -110,8 +159,8 @@
   </div>
 
   <!--script-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
   <!--footer-->
