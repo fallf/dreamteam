@@ -77,17 +77,19 @@
           <button class="form-submit">Calculate</button>
         </div>
         </div><!--  /.form fields -->
-      
-      
       </form>
+      
       <div id="results" style="display:none;"></div>
       </div><!--  /.calc-outer-wrap -->
       
-      <div class="field-outer calc-outer-wrap" style="margin-left: .5em;">
+
+      <div class="field-outer calc-outer-wrap"  id="location-form" style="display: none">
         <label for="zipcode">Zip-Code</label>
         <input type="text" name="zipcode" id="zipCode">
         <button id="getId" class="form-submit">Get Location</button>
       </div>
+
+
       <div class="col-12 col-md-8">
         <h2 class="subtitle">Showing Restaurants around you area: <span id="repo-search-term"></span></h2>
         <div id="repos-container" class="list-group">

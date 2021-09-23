@@ -1,3 +1,13 @@
+var caloriesLeft = 2000;
+function itemClicked(event) {
+    //Find "calories" class from target child, and parse it to a float
+    var caloriesChild = parseFloat(event.target.querySelector(".calories").textContent);
+    //Subtract the value of caloriesChild from caloriesLeft
+    caloriesLeft -= caloriesChild;
+
+    //Output the reamaining value from caloriesLeft to the console 
+    console.log(caloriesLeft);
+}
 var getmenu = function(){
     const query = itemInput.val.trim();
         var url = "https://trackapi.nutritionix.com/v2/search/instant?query=" + query + "&brand_ids=" + brand_id;
@@ -40,6 +50,7 @@ function menu() {
           var calories = data.hits[i].fields.nf_calories;
           place.textContent= data.hits[i].fields.brand_name;
           console.log(itemEl);
+          console.log(calories);
           var restEl = document.createElement('a');
                 restEl.classList = 'list-item flex-row justify-space-between align-center';
                 
@@ -48,8 +59,10 @@ function menu() {
                 var titleEl = document.createElement('span')
                 var area = document.createElement('span');
                 area.classList='subtitle';
+                titleEl.classList.add("calories");
                 titleEl.textContent = calories;
                 area.textContent = itemEl;
+                restEl.addEventListener("click", itemClicked);
                 
 
                 // append to container
@@ -64,7 +77,6 @@ function menu() {
     
 };
 menu();
-
 
 
 
