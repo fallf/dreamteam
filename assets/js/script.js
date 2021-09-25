@@ -25,7 +25,7 @@ function showForm(){
   /**
    * Display the calculation results
    *
-   * @param   {Integer}  calories   The calories burned
+   * @param   {Integer}  calories   
    * @param   {Integer}  distance   The distance run
    * @param   {String}   unit       The distance unit (miles or kilometers)
    * @param   {Integer}  burnRate   The calories per distance burn rate
