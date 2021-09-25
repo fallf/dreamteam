@@ -21,6 +21,9 @@ They also want to keep track of the calories they consume on a day-to-day basis 
 
 ## Website
 
+https://fallf.github.io/dreamteam/
+
+https://github.com/fallf/dreamteam
 
 ## Contribution
 Made with ❤️ by [Jorman Israel, Marvin Ren, Fatou Fall]
