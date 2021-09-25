@@ -1,4 +1,3 @@
-
 function showForm(){
   var x = document.getElementById("location-form");
   x.style.display= "block";
@@ -71,61 +70,31 @@ function showForm(){
       if(isNaN(age) || age < 0) {
           return errorMessage('Please enter a valid age');
       }
-    }
-  
-    /**
-     * Handle form submit
-     */
-    function submitHandler(e) {
-        e.preventDefault();
-  
-        // Age
-        let age = parseFloat(form.age.value);
-        //let unit = form.distance_unit.value;
-        if(isNaN(age) || age < 0) {
-            return errorMessage('Please enter a valid age');
-        }
-   
-        // Height
-        let heightCM = parseFloat(form.height_cm.value);
-        if(isNaN(heightCM) || heightCM < 0) {
-            
-          let heightFeet = parseFloat(form.height_ft.value);
-          if(isNaN(heightFeet) || heightFeet < 0) {
-              return errorMessage('Please enter a valid Height in feet or centimeters');
-          }      
-         let heightInches = parseFloat(form.height_in.value);
-          if(isNaN(heightInches) || heightInches < 0) {
-              heightInches=0;
-          }   
-          heightCM = (2.54 * heightInches) + (30.4 * heightFeet)
+ 
+      // Height
+      let heightCM = parseFloat(form.height_cm.value);
+      if(isNaN(heightCM) || heightCM < 0) {
           
+        let heightFeet = parseFloat(form.height_ft.value);
+        if(isNaN(heightFeet) || heightFeet < 0) {
+            return errorMessage('Please enter a valid Height in feet or centimeters');
+        }      
+       let heightInches = parseFloat(form.height_in.value);
+        if(isNaN(heightInches) || heightInches < 0) {
+            heightInches=0;
         }   
-  
-          let weight = parseFloat(form.weight.value);
-          if(isNaN(weight) || weight < 0) {
-              return errorMessage('Please enter a valid weight');
-          }   
-      
-        if(form.weight_unit.value == 'lb') {
-            weight = 0.453592 * weight;
-        }
-      
-       let calories = 0;
-       if(form.gender.value == 'Female') {
-          //females calories =  655.09 + 9.56 x (Weight in kg) + 1.84 x (Height in cm) - 4.67 x age   
-         calories = 655.09 + (9.56 * weight) + (1.84 * heightCM) - (4.67 * age);
-        }  else {
-          //Male calories 
-         calories = 66.47 + (13.75 * weight) + (5 * heightCM) - (6.75 * age);
-        }
+        heightCM = (2.54 * heightInches) + (30.4 * heightFeet)
         
-        //show location form
-        showForm();
-        // Display results
-       showResults(calories);
+      }   
 
-    }
+        let weight = parseFloat(form.weight.value);
+        if(isNaN(weight) || weight < 0) {
+            return errorMessage('Please enter a valid weight');
+        }   
+    
+      if(form.weight_unit.value == 'lb') {
+          weight = 0.453592 * weight;
+      }
     
      let calories = 0;
      if(form.gender.value == 'Female') {
@@ -231,7 +200,11 @@ function render (){
             // console.log(restaurant); 
          }
    
-    
+       //   // loop over results and show each item in a ul - brand_id as a data-brand-id attribute
+   
+      });  
+  });
+}
 
 function getMenu(e) {
   var target = e.target;
