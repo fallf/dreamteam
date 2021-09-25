@@ -5,26 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body class="flex-column min-100-vh">
+  <div id="form-error" style="display:none;"></div>
  <header class="hero">
-   <h1 class="app-title">Menu from: <span id="repo-name"></span></h1>
-   <h2 id="place" class="app-title"></h2>
-          
- <div>
-  <a href="./index.html" class="btn-back">
-              Go Back
-            </a>
-          </div>
-          
-        </header>
+      <h1 class="app-title">Menu from: <span id="repo-name"></span></h1>
+      <h2 id="place" class="app-title"></h2>
+              
+    <div>
+        <a id="backBtn" class="btn-back">
+          Go Back
+        </a>
+    </div>
+</header>
         
-        <main>
-            <div id="issues-container" class="list-group">
+  <main>
+    <div id="issues-container" class="list-group">
+      <div class="counter">
+        <h4>Calories</h4>
+        <p id="deduct-cals" class="center"></p>
+        <p id="bmr" class="center"></p>
+      </div>
 
-            </div>
-        </main>
-        <script src="./assets/js/menu.js"></script>
+    </div>
+ </main>
+        
+ <script src="./assets/js/menu.js"></script>
+        
 </body>
 </html>
