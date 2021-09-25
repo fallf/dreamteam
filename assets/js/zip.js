@@ -20,7 +20,7 @@ function render (){
   
   console.log(inputEl.value)
   // hit   zipcode api to get lat and lon
-   fetch("https://api.zip-codes.com/ZipCodesAPI.svc/1.0/QuickGetZipCodeDetails/"+inputEl.value+"?key=PYUHG08HN6TMG8HGUI6Q").then(function(response){
+   fetch("https://api.zip-codes.com/ZipCodesAPI.svc/1.0/QuickGetZipCodeDetails/"+inputEl.value+"?key=TULA5N3CNDIIVM288O22").then(function(response){
        return response.json();
    }).then(function(data){
        console.log(data)
