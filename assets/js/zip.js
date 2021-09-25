@@ -1,4 +1,3 @@
-
 var getId = document.querySelector("#getId");
 var inputEl = document.querySelector("#zipCode");
 const errors  = document.getElementById('form-error');
